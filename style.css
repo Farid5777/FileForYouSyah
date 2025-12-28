@@ -1,65 +1,55 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body { 
-    height: 100vh; display: flex; justify-content: center; align-items: center; 
-    background: #f3e5f5; font-family: 'Poppins', sans-serif; overflow: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.envelope {
-    width: 300px; height: 200px;
-    background: #ce93d8; /* Warna ungu pekat sikit */
-    position: relative;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    border-radius: 0 0 10px 10px;
-    z-index: 10;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3e5f5; /* Warna Lavender */
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Penutup envelope */
-.envelope::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-top: 100px solid #ba68c8;
-    transition: all 0.5s ease;
-    z-index: 15;
-}
-
-.envelope.open::before {
-    transform: rotateX(180deg);
-    transform-origin: top;
+.container {
+    padding: 20px;
 }
 
 .card {
-    position: absolute;
-    bottom: 0; left: 10px;
-    width: 280px; height: 180px;
     background: white;
-    padding: 20px;
+    width: 320px;
+    padding: 40px 30px;
+    border-radius: 20px;
     text-align: center;
-    border-radius: 10px;
-    transition: all 0.5s ease;
-    z-index: 5;
-    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.envelope.open .card {
-    transform: translateY(-120px); /* Kad keluar ke atas */
-    height: auto;
-    min-height: 250px;
+h1 {
+    color: #6a1b9a;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-h1 { color: #6a1b9a; font-size: 18px; margin-bottom: 10px; }
-p { color: #4a148c; font-size: 14px; line-height: 1.4; margin-bottom: 15px; }
+p {
+    color: #4a148c;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
 
-.wa-btn { 
+.wa-btn {
     display: inline-block;
-    padding: 8px 15px; background: #9c27b0; color: white !important; 
-    text-decoration: none; border-radius: 50px; font-size: 12px; font-weight: bold;
+    padding: 12px 25px;
+    background-color: #9c27b0;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background 0.3s ease;
 }
 
-/* Heart Animation */
-.heart { position: absolute; bottom: -100px; background: rgba(156,39,176,0.2); border-radius: 50%; animation: floatUp 10s infinite linear; }
-@keyframes floatUp { to { transform: translateY(-110vh) rotate(360deg); } }
+.wa-btn:hover {
+    background-color: #7b1fa2;
+}
