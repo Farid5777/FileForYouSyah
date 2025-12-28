@@ -33,6 +33,17 @@
         </a>
       </div>
     </div>
+
+    <audio id="myAudio">
+      <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+      document.body.addEventListener('click',function(){
+        var audio = document.getElementById("myAudio");
+        audio.play()
+      },{once:true});
+    </script>
   </body>
 </html>
+
 
